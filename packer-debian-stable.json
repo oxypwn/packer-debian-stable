@@ -32,6 +32,7 @@
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
+      "name": "debian-stable",
       "vboxmanage": [
         [
           "modifyvm",
@@ -51,7 +52,7 @@
   ],
   "post-processors": [
     {
-      "output": "debian-7.4.0-amd64.box",
+      "output": "packer-debian-stable.box",
       "type": "vagrant",
       "vagrantfile_template": "scripts/Vagrantfile"
     }
@@ -59,7 +60,7 @@
   "provisioners": [
     {
       "override": {
-        "virtualbox-iso": {
+        "debian-stable": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         }
       },
