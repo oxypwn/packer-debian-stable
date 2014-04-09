@@ -70,6 +70,7 @@
         "scripts/virtualbox.sh",
         "scripts/ruby.sh",
         "scripts/chef.sh",
+	"scripts/puppet.sh",
         "scripts/cleanup.sh"
       ],
       "type": "shell"
